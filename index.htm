@@ -1,74 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Valentine's Day</title>
-     <style>
-          body {
-               display: flex;
-               justify-content: center; /* Centraliza horizontalmente */
-               align-items: center; /* Centraliza verticalmente */
-               height: 100vh; /* Altura total da visualização */
-               margin: 0; /* Remove margens padrão */
-               background-image: url("love.jpg");
-               background-size: cover;
-          }
-          #container {
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               text-align: center;
-               padding: 20px;
-          }
-          #pedido{
-               font-size: 2em;
-               color: darkturquoise;
-          }
-          #button-container {
-               display: flex;
-               flex-direction: column;
-               gap: 10px; /* Espaçamento entre os botões */
-               align-items: center; /* Garante que os botões fiquem alinhados */
-          }
-          button {
-               padding: 10px 20px;
-               font-size: 15px;
-               cursor: pointer;
-               border-radius: 15px;
-               border: none;
-               outline: none;
-               transition: background-color 0.3s; /* Adiciona uma transição suave */
-          }
-          button:active {
-               transform: scale(0.98); /* Reduz um pouco o tamanho do botão quando clicado */
-          }
-     </style>
-</head>
-<body>
-     <div id="container">
-          <p id="pedido">Quer namorar comigo?</p>
-          <div id="button-container">
-               <button id="yes">Sim</button>
-               <button id="no">Não</button>
-          </div>
-     </div>
-
-     <script>
-          
-          document.getElementById('yes').addEventListener('click', () => {
-               window.location.href = 'https://youtu.be/s8JQIyPWK8U?t=14';
-          });
-          document.getElementById('no').addEventListener('mouseover', () => {
-               const buttonNo = document.getElementById('no');
-               const container = document.getElementById('button-container');
-               const randomX = Math.random() * (window.innerWidth - buttonNo.offsetWidth);
-               const randomY = Math.random() * (window.innerHeight - buttonNo.offsetHeight);
-
-               buttonNo.style.position = 'absolute';
-               buttonNo.style.left = `${randomX}px`;
-               buttonNo.style.top = `${randomY}px`;
-          });
-     </script>
-</body>
-</html>
+body {
+     display: flex;
+     justify-content: center; /* Centraliza horizontalmente */
+     align-items: center; /* Centraliza verticalmente */
+     height: 100vh; /* Altura total da visualização */
+     margin: 0; /* Remove margens padrão */
+     background-image: url("love.jpg");
+     background-size: cover;
+     background-position: center; /* Centraliza a imagem */
+ }
+ 
+ #container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     padding: 20px;
+ }
+ 
+ #pedido {
+     font-size: 2em;
+     color: darkturquoise;
+ }
+ 
+ #button-container {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     align-items: center;
+ }
+ 
+ button {
+     padding: 10px 20px;
+     font-size: 15px;
+     cursor: pointer;
+     border-radius: 15px;
+     border: none;
+     outline: none;
+     transition: background-color 0.3s;
+ }
+ 
+ button:active {
+     transform: scale(0.98);
+ }
+ 
