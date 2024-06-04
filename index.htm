@@ -14,12 +14,20 @@
                background-image: url("love.jpg");
                background-size: cover;
           }
+          #container {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+               padding: 20px;
+          }
           #pedido{
                font-size: 2em;
-               color:darkturquoise;
+               color: darkturquoise;
           }
           #button-container {
                display: flex;
+               flex-direction: column;
                gap: 10px; /* Espaçamento entre os botões */
                align-items: center; /* Garante que os botões fiquem alinhados */
           }
@@ -38,10 +46,12 @@
      </style>
 </head>
 <body>
-     <div id="button-container">
+     <div id="container">
           <p id="pedido">Quer namorar comigo?</p>
-          <button id="yes">Sim</button>
-          <button id="no">Não</button>
+          <div id="button-container">
+               <button id="yes">Sim</button>
+               <button id="no">Não</button>
+          </div>
      </div>
 
      <script>
